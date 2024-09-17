@@ -25,3 +25,9 @@ target/
 
 # OS generated files
 .DS_Store
+
+# Ignore the .metadata folder
+.metadata/
+
+# Ignore the Projects Guide file (in the current directory)
+Projects Guide.*

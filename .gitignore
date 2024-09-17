@@ -31,3 +31,8 @@ target/
 
 # Ignore the Projects Guide file (in the current directory)
 Projects Guide.*
+
+# .gitignore
+ignored_file.txt
+*.log
+

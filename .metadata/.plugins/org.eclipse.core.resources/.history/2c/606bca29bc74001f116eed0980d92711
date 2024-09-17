@@ -1,0 +1,29 @@
+package com.example.todo.api.service;
+
+import com.example.todo.api.entities.Todo;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.boot.CommandLineRunner;
+import org.springframework.stereotype.Component;
+
+import java.time.LocalDate;
+import java.util.Date;
+@Component
+public class ToDoInsert implements CommandLineRunner {
+
+    @Autowired
+    ToDoService toDoService;
+    
+    
+
+    @Override
+    public void run(String... args) throws Exception {
+        toDoService.addTask(new Todo(1, "Complete project proposal", new LocalDate, false, "High"));
+        toDoService.addTask(new Todo(2, "Finish presentation slides", new Date(2024, 8, 23), false, "Medium"));
+        toDoService.addTask(new Todo(3, "Attend team meeting", new Date(2024, 8, 25), false, "Low"));
+        toDoService.addTask(new Todo(4, "Review code changes", new Date(2024, 8, 27), true, "High"));
+        toDoService.addTask(new Todo(5, "Update project timeline", new Date(2024, 8, 30), false, "Medium"));
+        toDoService.addTask(new Todo(6, "Write unit tests", new Date(2024, 9, 2), false, "High"));
+
+
+    }
+}
